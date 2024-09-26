@@ -8,6 +8,7 @@
 		h1 {
 			margin-top: 5%;
 			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
 		}
 		table {
 			margin-left: auto;
@@ -21,17 +22,43 @@
     	.profile-img {
     		width: 300px;
     		height: 300px;
-    		border-radius: 10px;
+    		border-radius: 200px;
+    		transition-duration: .3s;
+    	}
+    	.profile-img:hover {
+    		width: 300px;
+    		height: 300px;
+    		border-radius: 20px;
+    		transition-duration: .1s;
     	}
     	table h2, p{
     		text-align: left;
+    		font-family: "Lucida Console", "Courier New", monospace;
     	}
     	div {
     		margin-top: 5%;
-    		width: 10%;
+    		width: 5%;
     		margin-left: auto;
 	      	margin-right: auto;
       		text-align: center; 
+    	}
+    	div a {
+    		color: black;
+    		text-decoration: none;
+    		font-family: Arial, Helvetica, sans-serif;
+    	}
+    	fotter {
+    		background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+    	}
+    	fotter a {
+    		color: white;
+    		font-family: "Lucida Console", "Courier New", monospace;
     	}
 	</style>
 </head>
@@ -55,8 +82,11 @@
 	<div>
 		<ul>
 			<li><a href="index2.html">About</a></li>
-			<li><a href="index3.html">My Favorite</a></li>
+			<li><a href="index3.html">Favorite</a></li>
 		</ul>
 	</div>
+	<fotter>
+		<a href="https://raw.githubusercontent.com/lolenseu/lolenseu.github.io/refs/heads/main/index.html">source code</a>
+	</fotter>
 </body>
 </html>
