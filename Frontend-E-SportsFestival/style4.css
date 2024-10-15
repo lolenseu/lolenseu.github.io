@@ -89,70 +89,76 @@ body {
   box-shadow: 0 0 25px #ff00ff;
 }
 
-.content-box h2 {
-  color: white;
-  margin-bottom: 5%;
+.contact-info {
+  margin-top: 30px;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin: 40px 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  text-align: center; 
+}
+
+.contact-info div:hover {
+  box-shadow: 0 0 10px rgb(0, 183, 255);
+}
+
+.contact-info div i {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #0ff;
+}
+
+.contact-info p {
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+  text-align: center; 
+  flex-grow: 1; 
+}
+
+h2 {
   font-size: 32px;
+  margin: 25px 0;
+  color: white;
+  text-transform: uppercase;
   text-shadow: 0 0 25px #ffffff;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.content-box p {
+p {
   font-size: 25px;
+  margin-bottom: 30px;
   color: white;
+  line-height: 1.6;
   text-shadow: 0 0 10px #ffffff;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: white;
-  font-family: "Lucida Console", "Courier New", monospace;
-}
-
-input {
-  border: none;
-  outline: none;
-  color: black;
-  margin: 16px;
-  padding: 15px 20px;
-  width: 40%;
-  background-color: white;
-  border-radius: 25px;
-  border: 1px solid black;
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 18px;
-  transition: .3s;
-}
-
-input:hover {  
-  width: 50%;
-  transition: .8s;
-  border: 1px solid #ff007f;
-  box-shadow: 0 0 25px #ff00ff;
-}
-
-button {
-  background-color: #ff00ff;
-  color: white;
-  margin-top: 5%;
+.contact-button {
+  background-color: rgb(214, 55, 219);    
+  color: #fff;
   padding: 15px 30px;
   border: none;
   border-radius: 10px;
-  cursor: pointer;
-  width: 24%;
   font-size: 20px;
-  font-family: "Lucida Console", "Courier New", monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
+.contact-button:hover {
   transform: scale(1.1);
   background-color: #ff00ff;
   box-shadow: 0 0 25px #ff00ff; 
 }
+
 
 /* Footer */
 footer {

@@ -64,12 +64,18 @@ body {
   box-shadow: 0 0 25px #ff00ff; 
 }
 
+.intro-img {
+  margin: 0;
+  height: auto;
+  width: auto;
+  z-index: 0;
+}
 
 
 /* Content */
 /* ikabil ditoy jay design jay pangcomputer */
 .content {
-  padding-top: 5%;
+  padding-top: 2%;
 }
 
 .content-box {
@@ -80,79 +86,63 @@ body {
   text-align: center;
   width: auto;
   height: auto;
-  margin: 200px 400px;
+  margin: 200px 200px;
   padding: 10px 200px;
   padding-top: 5%;
-  padding-bottom: 8%;
+  padding-bottom: 5%;
   border-radius: 20px;
   border: 2px solid #ff007f;
   box-shadow: 0 0 25px #ff00ff;
 }
 
-.content-box h2 {
+.fist-content {
+  margin: 10px 10px;
+  text-align: left;
+}
+
+.fist-content h1 {
   color: white;
-  margin-bottom: 5%;
-  font-size: 32px;
+  padding: 32px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
   text-shadow: 0 0 25px #ffffff;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.content-box p {
-  font-size: 25px;
+.fist-content div {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: rgba(18, 18, 18, 0.6);
+}
+
+.content1 img {
+  height: 350px;
+  width: 500px;
+}
+
+.content2 img {
+  height: 350px;
+  width: 500px;
+}
+
+.content3 img {
+  height: 350px;
+  width: 500px;
+}
+
+.fist-content p {
+  font-size: 24px;
+  margin-top: 50px;
+  margin: 50px;
   color: white;
   text-shadow: 0 0 10px #ffffff;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  color: white;
-  font-family: "Lucida Console", "Courier New", monospace;
-}
-
-input {
-  border: none;
-  outline: none;
-  color: black;
-  margin: 16px;
-  padding: 15px 20px;
-  width: 40%;
-  background-color: white;
-  border-radius: 25px;
-  border: 1px solid black;
-  font-family: "Lucida Console", "Courier New", monospace;
-  font-size: 18px;
-  transition: .3s;
-}
-
-input:hover {  
-  width: 50%;
-  transition: .8s;
-  border: 1px solid #ff007f;
-  box-shadow: 0 0 25px #ff00ff;
-}
-
-button {
-  background-color: #ff00ff;
-  color: white;
-  margin-top: 5%;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  width: 24%;
-  font-size: 20px;
-  font-family: "Lucida Console", "Courier New", monospace;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-  transform: scale(1.1);
-  background-color: #ff00ff;
-  box-shadow: 0 0 25px #ff00ff; 
-}
 
 /* Footer */
 footer {
