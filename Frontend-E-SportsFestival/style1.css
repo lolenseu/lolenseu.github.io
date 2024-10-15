@@ -67,11 +67,13 @@ body {
 
 
 /* Video Style */
-.video-container img {
-  margin: 0;
-  height: auto;
-  width: auto;
-  z-index: 0;
+.video {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  margin-top: -100vh;
+  position: fixed;
+  top: 0;
 }
 
 /* Center logo */
@@ -411,9 +413,13 @@ footer h4 {
   width: 100%;
   padding: 24px px;
   z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header a {
+  flex-grow: 1;
+  flex-basis: 200;
   width: 250px;
   float: none;
   display: block;
@@ -458,8 +464,56 @@ footer h4 {
 .content {
   background-color:rgba(18, 18, 18, 0.8);
   margin: 0;
-  display: flexbox;
+  display: flex;
+  flex-wrap: wrap;
   border-radius: 0px;
+}
+
+.content div {
+  flex-grow: 1;
+  flex-basis: 200;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.first-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.first-content h1, h2, h3 {
+  flex-grow: 1;
+  flex-basis: 200;
+}
+
+.second-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.second-content div {
+  flex-grow: 1;
+  flex-basis: 200;
+}
+
+.third-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.third-content div {
+  flex-grow: 1;
+  flex-basis: 200;
+}
+
+.developer-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.developer-box  a, h3{
+  flex-grow: 1;
+  flex-basis: 200;
 }
 
 /* Footer */

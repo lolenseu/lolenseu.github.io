@@ -188,9 +188,13 @@ footer h4 {
   width: 100%;
   padding: 24px px;
   z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header a {
+  flex-grow: 1;
+  flex-basis: 200;
   width: 250px;
   float: none;
   display: block;
@@ -199,6 +203,20 @@ footer h4 {
 
 .header-right {
   float: none;
+}
+
+.content-box {
+  background-color:rgba(18, 18, 18, 0.8);
+  margin: 0;
+  padding-top: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0px;
+}
+
+.content-box h2, p, div {
+  flex-grow: 1;
+  flex-basis: 200;
 }
 
 

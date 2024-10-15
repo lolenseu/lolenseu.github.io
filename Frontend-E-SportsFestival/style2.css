@@ -172,9 +172,13 @@ footer h4 {
   width: 100%;
   padding: 24px px;
   z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header a {
+  flex-grow: 1;
+  flex-basis: 200;
   width: 250px;
   float: none;
   display: block;
@@ -183,6 +187,51 @@ footer h4 {
 
 .header-right {
   float: none;
+}
+
+.content-box {
+  background-color:rgba(18, 18, 18, 0.8);
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0px;
+}
+
+.content-box {
+  flex-grow: 1;
+  flex-basis: 200;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content1 img, p {
+  flex-grow: 1;
+  flex-basis: 200;
+}
+
+.content2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content2 img, p {
+  flex-grow: 1;
+  flex-basis: 200;
+}
+
+.content3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content3 img, p {
+  flex-grow: 1;
+  flex-basis: 200;
 }
 
 
