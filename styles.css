@@ -5,7 +5,7 @@ html {
 body { 
     margin: 0;
     font-family: 'Poppins';    
-    background: url(https://cdn.wallpapersafari.com/69/90/DpTvQ0.jpg);
+    background: url(https://images5.alphacoders.com/135/thumb-1920-1355054.png);
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -15,23 +15,27 @@ body {
 
 /* content */
 .container {
-    height: 64%;
+    height: auto;
     width: auto;
-    margin: 10% 24%;
-    padding: 5px;
+    margin: 8% 24%;
+    padding: 50px 50px;
     border-radius: 50px;
     backdrop-filter: blur(10px);
-    background-color:rgba(148, 148, 148, 0.3);
+    background-color:rgba(255, 255, 255, 0.1);
 }
 
 .top-bar {
-    margin: 10%;
+    margin: 8px;
     display: flex;
 }
 
+.name-container h1 {
+    
+}
+
 .img-container img {
-    height: 280px;
-    width: 280px;
+    height: 320px;
+    width: 320px;
     text-align: left;
     margin: 5% 5%;
     border-radius: 100%;
@@ -39,21 +43,4 @@ body {
 
 .name-container {
     margin: 10px 40px;
-}
-
-
-/* footer */
-footer {
-    width: auto;
-    bottom: 0;
-    padding: 8px 0;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    background-color:rgba(24, 24, 24, 0.3);
-}
-    
-footer p {
-    
-    text-align: center;
-    text-shadow: 0 0 2px #ffffff; 
 }
