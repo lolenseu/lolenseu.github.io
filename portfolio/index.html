@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortez Portfolio</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #1e2226;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-family: 'Poppins';
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s ease;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+            padding-top: 50px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: yellow;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1e2226;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24%;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: yellow;
+        }
+
+        .intro-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 200px;
+        }
+
+        .intro {
+            text-align: left;
+            max-width: 50%;
+        }
+
+        .intro h1 {
+            color: yellow;
+            font-size: 24px;
+        }
+
+        .intro h2 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 16px;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: yellow;
+            padding: 10px;
+            transition: 0.2s;
+        }
+
+        .social-icons img:hover {
+            background-color: rgb(255, 174, 0);
+            transition: 0.2s;
+        }
+
+        .profile-image {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            border: 5px solid yellow;
+            object-fit: cover;
+            transition: 0.2s;
+        }
+
+        .profile-image:hover {
+            border: 5px solid rgb(255, 174, 0);
+            border-radius: 10%;
+            transition: 0.2s;
+        }
+
+        .timeline {
+            background-color: white;
+            position: relative;
+            max-width: 100%;
+            margin: 50px auto;
+            padding: 200px 0;
+            margin-top: 300px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .timeline-date {
+            flex: 1;
+            padding: 15px;
+            font-weight: bold;
+            text-align: right;
+            color: black;
+            margin-right: 100px;
+        }
+        
+        .timeline-content {
+            flex: 3;
+            background: white;
+            color: black;
+            padding: 15px;
+            border-radius: 10px;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 25%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: yellow;
+        }
+        
+        .timeline-item::after {
+            content: "";
+            position: absolute;
+            left: calc(25% - 10px);
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: yellow;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .footer {
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            width: 100%;
+            height: 20%;
+            margin: 35px 0;
+        }
+
+        .footer h2 {
+            font-size: 24px;
+        }
+
+        .footer p {
+            font-size: 16px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">CORTEZ</div>
+            <ul class="nav-links">
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#education-section" id="contact">Education</a></li>
+                <li><a href="#contact-section" id="contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="intro-container">
+            <div class="intro">
+                <h1>Hello, I'm</h1>
+                <h2>MARK LAWRENCE V. CORTEZ</h2>
+                <p class="description">
+                    I'm a second-year BSIT student at ISPSC Tagudin Campus, passionate about crafting clean, 
+                    beautiful, and interactive user interfaces. I specialize in designing minimalist, responsive, 
+                    and user-friendly experiences, developed with modular, scalable, and functional code.
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/lolenseu248/"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/lolenseu248/"><img src="img/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/mark-lawrence-cortez/"><img src="img/linkedin.png" alt="LinkedIn"></a>
+                </div>  
+            </div>
+
+            <img src="img/user1.jpg" alt="Profile Image" class="profile-image">
+        </div>
+    </div>
+
+    <div class="timeline" id="education-section">
+        <div class="timeline-item">
+            <div class="timeline-date">2022 - Present</div>
+            <div class="timeline-content">
+                <h3>College - ISPSC Tagudin Campus</h3>
+                <p>Currently pursuing a degree in Bachelor of Science in Information Technology.</p>
+            </div>
+        </div>
+    
+        <div class="timeline-item">
+            <div class="timeline-date">2020 - 2022</div>
+            <div class="timeline-content">
+                <h3>Senior High School - Tagudin National High School</h3>
+                <p>Completed Senior High School, with a focus on EIM (Electrical Installation and Maintenance).</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2016 - 2020</div>
+            <div class="timeline-content">
+                <h3>High School - Pascual Rivera Pimentel Memorial Academy</h3>
+                <p>Completed High School | Secondary School.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-date">2009 - 2016</div>
+            <div class="timeline-content">
+                <h3>Elementary - Nagtenga Elementary School</h3>
+                <p>Completed Primary School.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" id="contact-section">
+        <h2>Contact Me</h2>
+        <p>Email: lolenseu.koleutejeu248@gmail.com</p>
+        <p>Phone: +639673280015</p>
+        <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+    </footer>
+</body>
+</html>
