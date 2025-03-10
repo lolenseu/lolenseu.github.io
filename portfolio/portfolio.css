@@ -1,0 +1,238 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color:rgba(18, 18, 18, 0.6);
+    background-image: url('img/background.jpg');
+    color: white;
+    font-family: Arial, sans-serif;
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+/* navbar */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    background-color:rgba(18, 18, 18, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: yellow;
+}
+
+/* main body */
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.intro {
+    text-align: left;
+    max-width: 50%;
+}
+
+.intro h1 {
+    color: yellow;
+    font-size: 24px;
+}
+
+.intro h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.intro h3 {
+    color: yellow;
+    font-size: 38px;
+}
+
+.description {
+    font-size: 16px;
+}
+
+/* user links*/
+.btn {
+    color: white;
+    background-color: rgba(18, 18, 18, 0.6);
+    border: 2px solid yellow;
+    border-radius: 20px;
+    margin: 20px 0;
+    margin-right: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:hover {
+    border: 2px solid rgb(255, 174, 0); 
+}
+
+/* social media */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: yellow;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.social-icons img:hover {
+    background-color: rgb(255, 174, 0);
+    transition: 0.2s;
+}
+
+.profile-image {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    border: 5px solid yellow;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.profile-image:hover {
+    border: 5px solid rgb(255, 174, 0);
+    border-radius: 10%;
+    transition: 0.2s;
+}
+
+/* school timeline */
+.timeline {
+    background-color: white;
+    position: relative;
+    max-width: 100%;
+    margin-top: 50px auto;
+    padding: 200px 0;
+    margin-top: 300px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-date {
+    flex: 1;
+    padding: 15px;
+    font-weight: bold;
+    text-align: right;
+    color: black;
+    margin-right: 100px;
+}
+
+.timeline-content {
+    flex: 3;
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 25%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: yellow;
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    left: calc(25% - 10px);
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* footer */
+.footer {
+    background-color: #1e2226;
+    color: white;
+    text-align: center;
+    padding: 60px 0;
+    width: 100%;
+    height: 20%;
+}
+
+.footer h2 {
+    font-size: 24px;
+}
+
+.footer p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: auto;
+}
