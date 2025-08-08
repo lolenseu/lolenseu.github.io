@@ -11,10 +11,22 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color 0.5s ease;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    z-index: -1;
 }
 
 .container {
@@ -37,7 +49,7 @@ body {
     left: 0;
     width: 100%;
     backdrop-filter: blur(10px);
-    background-color:rgba(18, 18, 18, 0.6);
+    background-color:rgba(18, 18, 18, 0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,7 +109,7 @@ body {
 }
 
 .description {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* user links*/
@@ -135,13 +147,13 @@ body {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: yellow;
+    background-color: white;
     padding: 10px;
     transition: 0.2s;
 }
 
 .social-icons img:hover {
-    background-color: rgb(255, 174, 0);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
     transition: 0.2s;
 }
 
@@ -149,14 +161,14 @@ body {
     width: 380px;
     height: 380px;
     border-radius: 50%;
-    border: 5px solid yellow;
+    border: 4px solid yellow;
     object-fit: cover;
     transition: 0.2s;
 }
 
 .profile-image:hover {
-    border: 5px solid rgb(255, 174, 0);
     border-radius: 10%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
     transition: 0.2s;
 }
 
@@ -166,8 +178,15 @@ body {
     position: relative;
     max-width: 100%;
     margin-top: 50px auto;
-    padding: 200px 0;
+    padding: 100px 200px;
     margin-top: 300px;
+}
+
+.timeline h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: black;
 }
 
 .timeline-item {
@@ -202,7 +221,7 @@ body {
     top: 0;
     bottom: 0;
     width: 4px;
-    background: yellow;
+    background: black;
 }
 
 .timeline-item::after {
@@ -212,7 +231,7 @@ body {
     top: 50%;
     width: 20px;
     height: 20px;
-    background: yellow;
+    background: black;
     border-radius: 50%;
     transform: translateY(-50%);
 }
@@ -228,7 +247,7 @@ body {
 }
 
 .footer h2 {
-    font-size: 24px;
+    font-size: 32px;
 }
 
 .footer p {
