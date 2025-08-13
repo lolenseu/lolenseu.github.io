@@ -190,6 +190,7 @@ body::before {
     margin-top: 50px auto;
     padding: 100px 200px;
     margin-top: 300px;
+    align-items: center;
 }
 
 .education-section h2 {
@@ -222,6 +223,12 @@ body::before {
     padding: 15px;
     border-radius: 10px;
     position: relative;
+}
+
+.clickable {
+    cursor: pointer;
+    border: 2px solid black;
+    margin-right: 150px;
 }
 
 .timeline-item::before {
@@ -352,7 +359,7 @@ body::before {
 }
 
 /* footer */
-.footer {
+.contact-section {
     background-color: #1e2226;
     color: white;
     text-align: center;
@@ -361,11 +368,11 @@ body::before {
     height: 20%;
 }
 
-.footer h2 {
+.contact-section h2 {
     font-size: 32px;
 }
 
-.footer p {
+.contact-section p {
     font-size: 16px;
     max-width: 600px;
     margin: auto;

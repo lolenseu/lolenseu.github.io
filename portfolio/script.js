@@ -33,6 +33,16 @@ document.addEventListener("DOMContentLoaded", function() {
     onScroll();
 });
 
+// clickable timeline items
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.timeline-content.clickable').forEach(function(el) {
+        el.addEventListener('click', function() {
+            const link = el.getAttribute('data-link');
+            if (link) window.open(link, '_blank');
+        });
+    });
+});
+
 // certificate popover
 document.addEventListener("DOMContentLoaded", function() {
     const popover = document.getElementById("certificate-popover");
