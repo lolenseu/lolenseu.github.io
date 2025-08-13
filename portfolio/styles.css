@@ -86,6 +86,28 @@ body::before {
     color: yellowgreen;
 }
 
+/* hamburger styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin: 5px 0;
+    background: yellowgreen;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
 /* main body */
 .intro-container {
     display: flex;
@@ -389,4 +411,135 @@ body::before {
 .ani.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* responsive navbar */
+@media (max-width: 900px) {
+    /* menu bar */
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 75px;
+        right: 0;
+        background: rgba(18, 18, 18, 0.98);
+        flex-direction: column;
+        gap: 0;
+        width: 200px;
+        height: calc(100vh - 70px);
+        align-items: flex-start;
+        padding: 30px 0 0 30px;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 1001;
+    }
+    
+    .nav-links.show {
+        transform: translateX(0);
+    }
+
+    .nav-links li {
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* containers */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-top: 90px;
+        margin: 0;
+    }
+
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 120px;
+        padding: 0 10px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .intro {
+        text-align: center;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+        margin-top: 20px;
+    }
+
+    .education-section,
+    .skills-section,
+    .certificates-section {
+        padding: 40px 20px;
+    }
+
+    .education-section h2,
+    .skills-section h2,
+    .certificates-section h2 {
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+
+    .timeline-date {
+        margin-right: 20px;
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .timeline-content {
+        padding: 10px;
+        font-size: 15px;
+        margin-right: 0;
+    }
+
+    .certificate-item {
+        flex-direction: column;
+        max-width: 100%;
+        margin-bottom: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .certificate-item img {
+        width: 90vw;
+        max-width: 320px;
+        margin: 0 0 10px 0;
+    }
+
+    .certificate-item p {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .project-grid {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 10px;
+    }
+
+    .project-card {
+        max-width: 100%;
+        margin: 0 auto 30px auto;
+        padding: 10px;
+    }
+
+    .contact-section {
+        padding: 40px 10px;
+    }
 }
