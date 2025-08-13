@@ -13,6 +13,7 @@
             <ul class="nav-links">
                 <li><a href="#" id="home">Home</a></li>
                 <li><a href="#education-section" id="education">Education</a></li>
+                <li><a href="#certificates-section" id="certificates">Certificates</a></li>
                 <li><a href="#skills-section" id="skills">Skills</a></li>
                 <li><a href="#contact-section" id="contact">Contact</a></li>
             </ul>
@@ -73,6 +74,29 @@
         </div>
     </div>
 
+    <div class="certificates-section" id="certificates-section">
+        <h2>Certificates</h2>
+        <div class="certificate-item">
+            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-1ec53590-5266-455e-a9f5-d2ec0ff9df45.jpg" alt="Certificate 1">
+            <p>GIT, GitLab, GitHub Fundamentals for Software Developers - Udemy</p>
+        </div>
+        <div class="certificate-item">
+            <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-ac49bd04-949a-4ad2-a03e-d1b19ed7164a.jpg" alt="Certificate 2">
+            <p>Python Complete Course For Python Beginners - Udemy</p>
+        </div>
+        <div class="certificate-item">
+            <img src="images/certificate3.jpg" alt="Certificate 3">
+            <p>Machine Learning Specialization - DEF University</p>
+        </div>
+    </div>
+
+    <div id="certificate-popover" class="popover-overlay" style="display:none;">
+        <div class="popover-content">
+            <img id="popover-img" src="" alt="Certificate" />
+            <span class="popover-close" id="popover-close">X</span>
+        </div>
+    </div>
+
     <div class="skills-section" id="skills-section">
         <h2>Skills</h2>
         <ul>
@@ -81,6 +105,24 @@
             <li>Responsive Web Design</li>
             <li>Git & GitHub</li>
         </ul>
+    </div>
+
+    <div class="content-section" id="projects-section">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="img/project1.png" alt="Portfolio Website Screenshot">
+                <h3>Portfolio Website</h3>
+                <p>A responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/yourusername/portfolio" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <img src="img/project2.png" alt="ESP32 Drone Telemetry Screenshot">
+                <h3>ESP32 Drone Telemetry</h3>
+                <p>Real-time data transmission for drones using ESP-NOW and MAVLink.</p>
+                <a href="https://github.com/yourusername/esp32-drone" target="_blank">View on GitHub</a>
+            </div>
+        </div>
     </div>
 
     <footer class="footer" id="contact-section">
