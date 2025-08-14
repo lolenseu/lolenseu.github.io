@@ -267,9 +267,16 @@ body::before {
 }
 
 .clickable {
-    cursor: pointer;
-    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.2s ease;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background: white;
     margin-right: 150px;
+    cursor: pointer;
+}
+.clickable:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .timeline-item::before {
@@ -332,6 +339,13 @@ body::before {
     border-radius: 5px;
     margin-right: 15px;
     border: 2px solid #ccc;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.certificate-item img:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    transform: scale(1.05);
 }
 
 .certificate-item p {
@@ -341,7 +355,7 @@ body::before {
     color: black;
 }
 
-.popover-overlay {
+.certificate-popover-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -355,7 +369,7 @@ body::before {
     justify-content: center;
 }
 
-.popover-content {
+.certificate-popover-content {
     position: relative;
     background: transparent;
     border-radius: 10px;
@@ -366,14 +380,14 @@ body::before {
     align-items: center;
 }
 
-.popover-content img {
+.certificate-popover-content img {
     max-width: 90vw;
     max-height: 80vh;
     border-radius: 10px;
     box-shadow: 0 0 20px #222;
 }
 
-.popover-close {
+.certificate-popover-close {
     position: absolute;
     top: 10px;
     right: 20px;
@@ -446,7 +460,6 @@ body::before {
     position: relative;
     max-width: 100%;
     padding: 100px 200px;
-    padding-bottom: 200px;
     margin: auto;
 }
 
@@ -493,12 +506,105 @@ body::before {
 }
 
 
+/* photos section */
+.photos-section {
+    background-color: white;
+    position: relative;
+    max-width: 100%;
+    padding: 100px 200px;
+    margin: auto;
+    padding-bottom: 150px;
+}
+
+.photos-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 60px;
+    color: black;
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.photo-item {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.photo-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* photo popover */
+.photos-popover-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photos-popover-content {
+    position: relative;
+    background: transparent;
+    border-radius: 10px;
+    padding: 0;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photos-popover-content img {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #222;
+}
+
+.photos-popover-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    padding: 0 15px;
+    z-index: 10001;
+}
+
+
 /* footer */
 .contact-section {
     background-color: #1e2226;
     color: white;
     text-align: center;
-    padding: 60px 0;
+    padding: 20px 0;
     width: 100%;
     height: 18%;
 }
@@ -600,14 +706,16 @@ body::before {
     .education-section,
     .skills-section,
     .certificates-section,
-    .projects-section {
+    .projects-section,
+    .photos-section {
         padding: 40px 20px;
     }
 
     .education-section h2,
     .skills-section h2,
     .certificates-section h2,
-    .projects-section h2 {
+    .projects-section h2,
+    .photos-section h2 {
         margin-bottom: 40px;
         font-size: 24px;
     }

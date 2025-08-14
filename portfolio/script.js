@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
         {id: "education-section", nav: "education"},
         {id: "certificates-section", nav: "certificates"},
         {id: "skills-section", nav: "skills"},
-        {id: "projects-section", nav: "projects"}
+        {id: "projects-section", nav: "projects"},
+        {id: "photos-section", nav: "photos"},
     ];
     const navLinks = {};
     sections.forEach(s => {
@@ -95,8 +96,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // certificate popover
 document.addEventListener("DOMContentLoaded", function() {
     const popover = document.getElementById("certificate-popover");
-    const popoverImg = document.getElementById("popover-img");
-    const popoverClose = document.getElementById("popover-close");
+    const popoverImg = document.getElementById("certificate-popover-img");
+    const popoverClose = document.getElementById("certificate-popover-close");
 
     document.querySelectorAll(".certificate-item img").forEach(img => {
         img.style.cursor = "pointer";
@@ -122,6 +123,41 @@ document.addEventListener("DOMContentLoaded", function() {
         if (popover.style.display === "flex" && (e.key === "Escape" || e.key === "Esc")) {
             popover.style.display = "none";
             popoverImg.src = "";
+        }
+    });
+});
+
+
+// photo popover
+document.addEventListener("DOMContentLoaded", function() {
+    const photosPopover = document.getElementById("photos-popover");
+    const photosPopoverImg = document.getElementById("photos-popover-img");
+    const photosPopoverClose = document.getElementById("photos-popover-close");
+
+    document.querySelectorAll(".photo-item img").forEach(img => {
+        img.style.cursor = "pointer";
+        img.addEventListener("click", function() {
+            photosPopoverImg.src = img.src;
+            photosPopover.style.display = "flex";
+        });
+    });
+
+    photosPopoverClose.addEventListener("click", function() {
+        photosPopover.style.display = "none";
+        photosPopoverImg.src = "";
+    });
+
+    photosPopover.addEventListener("click", function(e) {
+        if (e.target === photosPopover) {
+            photosPopover.style.display = "none";
+            photosPopoverImg.src = "";
+        }
+    });
+
+    document.addEventListener("keydown", function(e) {
+        if (photosPopover.style.display === "flex" && (e.key === "Escape" || e.key === "Esc")) {
+            photosPopover.style.display = "none";
+            photosPopoverImg.src = "";
         }
     });
 });
