@@ -435,7 +435,7 @@ body::before {
 }
 
 .skill-category li {
-    font-size: 15px;
+    font-size: 16px;
     color: black;
 }
 
@@ -469,7 +469,7 @@ body::before {
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    padding: 20px;
+    padding: 40px 20px;
     width: 300px;
     text-align: center;
     cursor: pointer;
@@ -493,7 +493,6 @@ body::before {
 }
 
 
-
 /* footer */
 .contact-section {
     background-color: #1e2226;
@@ -514,6 +513,7 @@ body::before {
     margin: auto;
 }
 
+
 /* animate on scroll */
 .ani {
     opacity: 0;
@@ -526,6 +526,7 @@ body::before {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 /* responsive navbar */
 @media (max-width: 900px) {
@@ -598,13 +599,15 @@ body::before {
 
     .education-section,
     .skills-section,
-    .certificates-section {
+    .certificates-section,
+    .projects-section {
         padding: 40px 20px;
     }
 
     .education-section h2,
     .skills-section h2,
-    .certificates-section h2 {
+    .certificates-section h2,
+    .projects-section h2 {
         margin-bottom: 40px;
         font-size: 24px;
     }
