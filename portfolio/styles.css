@@ -210,7 +210,7 @@ body::before {
     width: 380px;
     height: 380px;
     border-radius: 50%;
-    border: 5px solid yellowgreen;
+    border: 5px solid white;
     object-fit: cover;
     transition: 0.2s;
 }
@@ -311,6 +311,10 @@ body::before {
     font-size: 32px;
     margin-bottom: 60px;
     color: black;
+}
+
+.certificate-grid {
+    padding: 50px 0;
 }
 
 .certificate-item {
@@ -436,14 +440,68 @@ body::before {
 }
 
 
+/* projects section */
+.projects-section {
+    background-color: white;
+    position: relative;
+    max-width: 100%;
+    padding: 100px 200px;
+    padding-bottom: 200px;
+    margin: auto;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 100px;
+    color: black;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.project-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+
+
 /* footer */
 .contact-section {
     background-color: #1e2226;
     color: white;
     text-align: center;
-    padding: 20% 0;
+    padding: 60px 0;
     width: 100%;
-    height: 20%;
+    height: 18%;
 }
 
 .contact-section h2 {
@@ -460,7 +518,7 @@ body::before {
 .ani {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition: opacity 1.5s ease, transform 0.7s ease;
     will-change: opacity, transform;
 }
 

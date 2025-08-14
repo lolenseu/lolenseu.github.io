@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
         {id: "education-section", nav: "education"},
         {id: "certificates-section", nav: "certificates"},
         {id: "skills-section", nav: "skills"},
-        {id: "contact-section", nav: "contact"}
+        {id: "projects-section", nav: "projects"}
     ];
     const navLinks = {};
     sections.forEach(s => {
@@ -123,6 +123,17 @@ document.addEventListener("DOMContentLoaded", function() {
             popover.style.display = "none";
             popoverImg.src = "";
         }
+    });
+});
+
+
+// clickable project cards
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const link = card.getAttribute('data-link');
+            if (link) window.open(link, '_blank');
+        });
     });
 });
 
