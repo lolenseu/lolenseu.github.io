@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 // underline menu bar
 document.addEventListener("DOMContentLoaded", function() {
     const sections = [
@@ -48,6 +49,22 @@ document.addEventListener("DOMContentLoaded", function() {
     onScroll();
 });
 
+
+// typing effect for motto
+const text = "\"Work is easy if you can automate it.\"";
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typing").textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+
+    window.onload = typeWriter;
+
+
 // clickable timeline items
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.timeline-content.clickable').forEach(function(el) {
@@ -57,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
 
 // certificate popover
 document.addEventListener("DOMContentLoaded", function() {
@@ -91,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
 
 // animate on scroll
 document.addEventListener("DOMContentLoaded", function() {
