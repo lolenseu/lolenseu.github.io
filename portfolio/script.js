@@ -52,17 +52,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // typing effect for motto
 const text = "\"Work is easy if you can automate it.\"";
-    let i = 0;
+let i = 0;
+let typingInterval;
 
-    function typeWriter() {
-        if (i < text.length) {
-            document.getElementById("typing").textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
+function typeWriter() {
+    if (i < text.length) {
+        document.getElementById("typing").textContent += text.charAt(i);
+        i++;
+    } else {
+        clearInterval(typingInterval);
     }
+}
 
-    window.onload = typeWriter;
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            i = 0;
+            document.getElementById("typing").textContent = "";
+            typingInterval = setInterval(typeWriter, 100);
+        } else {
+            clearInterval(typingInterval);
+            document.getElementById("typing").textContent = "";
+            i = 0;
+        }
+    });
+});
+
+observer.observe(document.querySelector(".motto"));
 
 
 // clickable timeline items
