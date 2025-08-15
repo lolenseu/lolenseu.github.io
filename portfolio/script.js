@@ -128,6 +128,82 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// certificate popover navigation
+document.addEventListener("DOMContentLoaded", function() {
+    const certPopover = document.getElementById("certificate-popover");
+    const certPopoverImg = document.getElementById("certificate-popover-img");
+    const certPopoverClose = document.getElementById("certificate-popover-close");
+    const certPopoverPrev = document.getElementById("certificate-popover-prev");
+    const certPopoverNext = document.getElementById("certificate-popover-next");
+
+    const certImgs = Array.from(document.querySelectorAll(".certificate-item img"));
+    let certIndex = 0;
+
+    function showCert(index) {
+        if (index < 0) index = certImgs.length - 1;
+        if (index >= certImgs.length) index = 0;
+        certIndex = index;
+        certPopoverImg.src = certImgs[certIndex].src;
+    }
+
+    certImgs.forEach((img, idx) => {
+        img.style.cursor = "pointer";
+        img.addEventListener("click", function() {
+            showCert(idx);
+            certPopover.style.display = "flex";
+        });
+    });
+
+    certPopoverPrev.addEventListener("click", function(e) {
+        e.stopPropagation();
+        showCert(certIndex - 1);
+    });
+
+    certPopoverNext.addEventListener("click", function(e) {
+        e.stopPropagation();
+        showCert(certIndex + 1);
+    });
+
+    certPopoverClose.addEventListener("click", function() {
+        certPopover.style.display = "none";
+        certPopoverImg.src = "";
+    });
+
+    certPopover.addEventListener("click", function(e) {
+        if (e.target === certPopover) {
+            certPopover.style.display = "none";
+            certPopoverImg.src = "";
+        }
+    });
+
+    document.addEventListener("keydown", function(e) {
+        if (certPopover.style.display === "flex") {
+            if (e.key === "Escape" || e.key === "Esc") {
+                certPopover.style.display = "none";
+                certPopoverImg.src = "";
+            }
+            if (e.key === "ArrowLeft") {
+                showCert(certIndex - 1);
+            }
+            if (e.key === "ArrowRight") {
+                showCert(certIndex + 1);
+            }
+        }
+    });
+});
+
+
+// clickable project cards
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const link = card.getAttribute('data-link');
+            if (link) window.open(link, '_blank');
+        });
+    });
+});
+
+
 // photo popover
 document.addEventListener("DOMContentLoaded", function() {
     const photosPopover = document.getElementById("photos-popover");
@@ -163,13 +239,67 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// clickable project cards
+// photo popover navigation
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('click', function() {
-            const link = card.getAttribute('data-link');
-            if (link) window.open(link, '_blank');
+    const photosPopover = document.getElementById("photos-popover");
+    const photosPopoverImg = document.getElementById("photos-popover-img");
+    const photosPopoverClose = document.getElementById("photos-popover-close");
+    const photosPopoverPrev = document.getElementById("photos-popover-prev");
+    const photosPopoverNext = document.getElementById("photos-popover-next");
+
+    const photoImgs = Array.from(document.querySelectorAll(".photo-item img"));
+    let currentIndex = 0;
+
+    function showPhoto(index) {
+        if (index < 0) index = photoImgs.length - 1;
+        if (index >= photoImgs.length) index = 0;
+        currentIndex = index;
+        photosPopoverImg.src = photoImgs[currentIndex].src;
+    }
+
+    photoImgs.forEach((img, idx) => {
+        img.style.cursor = "pointer";
+        img.addEventListener("click", function() {
+            showPhoto(idx);
+            photosPopover.style.display = "flex";
         });
+    });
+
+    photosPopoverPrev.addEventListener("click", function(e) {
+        e.stopPropagation();
+        showPhoto(currentIndex - 1);
+    });
+
+    photosPopoverNext.addEventListener("click", function(e) {
+        e.stopPropagation();
+        showPhoto(currentIndex + 1);
+    });
+
+    photosPopoverClose.addEventListener("click", function() {
+        photosPopover.style.display = "none";
+        photosPopoverImg.src = "";
+    });
+
+    photosPopover.addEventListener("click", function(e) {
+        if (e.target === photosPopover) {
+            photosPopover.style.display = "none";
+            photosPopoverImg.src = "";
+        }
+    });
+
+    document.addEventListener("keydown", function(e) {
+        if (photosPopover.style.display === "flex") {
+            if (e.key === "Escape" || e.key === "Esc") {
+                photosPopover.style.display = "none";
+                photosPopoverImg.src = "";
+            }
+            if (e.key === "ArrowLeft") {
+                showPhoto(currentIndex - 1);
+            }
+            if (e.key === "ArrowRight") {
+                showPhoto(currentIndex + 1);
+            }
+        }
     });
 });
 
@@ -188,4 +318,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     window.addEventListener('scroll', handleAni);
     handleAni();
+});
+
+
+// back to top button
+document.addEventListener("DOMContentLoaded", function() {
+    const backToTopBtn = document.getElementById("back-to-top");
+    window.addEventListener("scroll", function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add("show");
+        } else {
+            backToTopBtn.classList.remove("show");
+        }
+    });
+    backToTopBtn.addEventListener("click", function() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 });
