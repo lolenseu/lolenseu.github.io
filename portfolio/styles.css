@@ -515,7 +515,7 @@ body::before {
 .project-card {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
     padding: 40px 20px;
     width: 300px;
     text-align: center;
@@ -524,6 +524,7 @@ body::before {
 }
 
 .project-card:hover {
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
     transform: translateY(-4px) scale(1.03);
 }
 
